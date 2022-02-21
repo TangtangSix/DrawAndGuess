@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:background_element="$media:background"
+    >
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:top_margin="30vp"
+        >
+        <Text
+            ohos:height="50vp"
+            ohos:width="match_parent"
+            ohos:layout_alignment="center"
+            ohos:text="你画我猜"
+            ohos:text_size="30fp"
+            ohos:text_alignment="center">
+
+        </Text>
+    </DirectionalLayout>
+
+    <DirectionalLayout
+        ohos:id="$+id:frame_container"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:background_element="$graphic:animation_element"
+        ohos:layout_alignment="center"
+        ohos:top_margin="20vp"/>
+
+    <DirectionalLayout
+        ohos:height="0vp"
+        ohos:weight="1"
+        ohos:width="match_parent"
+        ohos:top_margin="20vp"
+        ohos:orientation="horizontal"
+        >
+            <DirectionalLayout
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:bottom_padding="5vp"
+                ohos:layout_alignment="center"
+                >
+                <Button
+                    ohos:id="$+id:btn_single_game"
+                    ohos:height="50vp"
+                    ohos:width="150vp"
+                    ohos:background_element="$graphic:button"
+                    ohos:bottom_margin="5vp"
+                    ohos:top_margin="10vp"
+                    ohos:layout_alignment="center"
+                    ohos:text="单人模式"
+                    ohos:text_size="20fp"
+                    >
+
+                </Button>
+
+                <Button
+                    ohos:id="$+id:btn_double_game"
+                    ohos:height="50vp"
+                    ohos:width="150vp"
+                    ohos:background_element="$graphic:button"
+                    ohos:bottom_margin="10vp"
+                    ohos:top_margin="5vp"
+                    ohos:layout_alignment="center"
+                    ohos:text="双人模式"
+                    ohos:text_size="20fp"
+
+                    >
+
+                </Button>
+
+                <Button
+                    ohos:id="$+id:btn_data_manage"
+                    ohos:height="50vp"
+                    ohos:width="150vp"
+                    ohos:background_element="$graphic:button"
+                    ohos:bottom_margin="10vp"
+                    ohos:top_margin="5vp"
+                    ohos:layout_alignment="center"
+                    ohos:text="数据管理"
+                    ohos:text_size="20fp"
+
+                    >
+
+                </Button>
+            </DirectionalLayout>
+
+    </DirectionalLayout>
+
+</DirectionalLayout>

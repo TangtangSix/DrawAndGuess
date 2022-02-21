@@ -1,0 +1,44 @@
+{
+  "color": [
+    {
+      "name": "blue_1E90FF",
+      "value": "#1E90FF"
+    },
+    {
+      "name": "gray_666666",
+      "value": "#666666"
+    },
+    {
+      "name": "gray_E6E6E6",
+      "value": "#E6E6E6"
+    },
+    {
+      "name": "gray_CFCFCF",
+      "value": "#CFCFCF"
+    },
+    {
+      "name": "gray_CDCDCD",
+      "value": "#CDCDCD"
+    },
+    {
+      "name": "gray_515151",
+      "value": "#515151"
+    },
+    {
+      "name": "gray_2C2C2C",
+      "value": "#2C2C2C"
+    },
+    {
+      "name": "white_FFFFFF",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "white_DFDFDF",
+      "value": "#DFDFDF"
+    },
+    {
+      "name": "black_000000",
+      "value": "#000000"
+    }
+  ]
+}

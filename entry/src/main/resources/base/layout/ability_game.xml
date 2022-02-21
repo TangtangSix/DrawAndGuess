@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:orientation="vertical">
+
+    <DependentLayout
+        ohos:height="50vp"
+        ohos:width="match_parent"
+        ohos:orientation="horizontal"
+        ohos:background_element="$color:gray_E6E6E6"
+        >
+        <Button
+            ohos:id="$+id:btn_back"
+            ohos:height="40vp"
+            ohos:width="40vp"
+            ohos:left_margin="10vp"
+            ohos:align_parent_left="true"
+            ohos:vertical_center="true"
+            ohos:background_element="$graphic:button_back"
+            >
+        </Button>
+
+        <DirectionalLayout
+            ohos:height="40vp"
+            ohos:width="match_content"
+            ohos:orientation="vertical"
+            ohos:center_in_parent="true">
+            <Text
+                ohos:id="$+id:text_topic"
+                ohos:height="0vp"
+                ohos:weight="1"
+                ohos:width="match_content"
+                ohos:layout_alignment="center"
+                ohos:text="题目"
+                ohos:text_alignment="center"
+                ohos:text_size="20vp">
+            </Text>
+
+            <Text
+                ohos:id="$+id:text_countdown"
+                ohos:height="0vp"
+                ohos:weight="1"
+                ohos:width="match_content"
+                ohos:layout_alignment="center"
+                ohos:text_alignment="center"
+                ohos:text="倒计时"
+                ohos:text_size="15vp"
+                >
+            </Text>
+        </DirectionalLayout>
+
+
+        <Button
+            ohos:id="$+id:btn_finish"
+            ohos:height="40vp"
+            ohos:width="match_content"
+            ohos:right_margin="20vp"
+            ohos:text="完成"
+            ohos:text_size="20vp"
+            ohos:align_parent_right="true"
+            ohos:vertical_center="true"
+            >
+        </Button>
+    </DependentLayout>
+
+    <com.tang.draw.view.DrawView
+        ohos:id="$+id:draw_view"
+        ohos:height="0vp"
+        ohos:width="match_parent"
+        ohos:weight="1"
+        >
+
+    </com.tang.draw.view.DrawView>
+
+    <DirectionalLayout
+        ohos:id="$+id:layout_draw"
+        ohos:height="150vp"
+        ohos:width="match_parent"
+        ohos:background_element="$color:gray_E6E6E6"
+        ohos:orientation="vertical">
+
+        <DirectionalLayout
+            ohos:height="75vp"
+            ohos:width="match_parent"
+            ohos:orientation="horizontal">
+
+            <Text
+                ohos:height="match_parent"
+                ohos:width="match_content"
+                ohos:text="粗细"
+                ohos:text_size="20fp"
+                >
+
+            </Text>
+
+            <com.tang.draw.view.StrokeWidthChooseView
+                ohos:id="$+id:strokeWidthChooseView"
+                ohos:height="match_parent"
+                ohos:width="0vp"
+                ohos:weight="1"
+                >
+            </com.tang.draw.view.StrokeWidthChooseView>
+
+            <DirectionalLayout
+                ohos:height="match_parent"
+                ohos:width="match_content"
+                ohos:orientation="horizontal"
+                >
+
+                <Button
+                    ohos:id="$+id:btn_revoke"
+                    ohos:height="40vp"
+                    ohos:width="40vp"
+                    ohos:left_margin="10vp"
+                    ohos:right_margin="5vp"
+                    ohos:background_element="$media:icon_revoke"
+                    ohos:layout_alignment="vertical_center"
+                    >
+
+                </Button>
+
+                <Button
+                    ohos:id="$+id:btn_eraser"
+                    ohos:height="40vp"
+                    ohos:width="40vp"
+                    ohos:left_margin="5vp"
+                    ohos:right_margin="5vp"
+                    ohos:background_element="$media:icon_rubbish"
+                    ohos:layout_alignment="vertical_center"
+                    >
+
+                </Button>
+
+                <Button
+                    ohos:id="$+id:btn_clear"
+                    ohos:height="40vp"
+                    ohos:width="40vp"
+                    ohos:left_margin="5vp"
+                    ohos:right_margin="10vp"
+                    ohos:background_element="$media:icon_clear"
+                    ohos:layout_alignment="vertical_center"
+                    >
+                </Button>
+            </DirectionalLayout>
+
+        </DirectionalLayout>
+
+
+        <com.tang.draw.view.ColorHorizontalScrollView
+            ohos:id="$+id:colorHorizontalScrollView"
+            ohos:height="75vp"
+            ohos:width="match_parent">
+        </com.tang.draw.view.ColorHorizontalScrollView>
+
+    </DirectionalLayout>
+
+    <DirectionalLayout
+        ohos:id="$+id:layout_answer"
+        ohos:height="150vp"
+        ohos:width="match_parent"
+        ohos:background_element="$color:gray_E6E6E6"
+        >
+
+        <Text
+            ohos:height="50vp"
+            ohos:width="match_content"
+            ohos:layout_alignment="center"
+            ohos:text="等待主机端进行绘图"
+            ohos:text_size="20fp"
+            >
+
+        </Text>
+
+        <DependentLayout
+            ohos:height="75vp"
+            ohos:width="match_parent">
+            <TextField
+                ohos:id="$+id:input_answer"
+                ohos:height="50vp"
+                ohos:width="200vp"
+                ohos:left_margin="10vp"
+                ohos:left_padding="20vp"
+                ohos:right_padding="24vp"
+                ohos:top_padding="8vp"
+                ohos:bottom_padding="8vp"
+                ohos:text_size="20vp"
+                ohos:hint="请输入答案"
+                ohos:align_parent_left="true"
+                ohos:text_alignment="vertical_center"
+                ohos:background_element="$graphic:background_text_field"
+                ohos:element_cursor_bubble="$graphic:ele_cursor_bubble"
+                ohos:basement="$color:black_000000"
+                >
+            </TextField>
+
+            <Button
+                ohos:id="$+id:btn_submit"
+                ohos:height="50vp"
+                ohos:width="100vp"
+                ohos:right_margin="10vp"
+                ohos:text="提交"
+                ohos:text_size="20fp"
+                ohos:align_parent_right="true"
+                ohos:text_alignment="center"
+                ohos:background_element="$graphic:button"
+                ></Button>
+        </DependentLayout>
+
+    </DirectionalLayout>
+</DirectionalLayout>

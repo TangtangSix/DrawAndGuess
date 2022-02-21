@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <DependentLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:orientation="horizontal"
+        ohos:background_element="$color:gray_E6E6E6"
+        >
+        <Button
+            ohos:id="$+id:btn_back"
+            ohos:height="40vp"
+            ohos:width="40vp"
+            ohos:left_margin="10vp"
+            ohos:align_parent_left="true"
+            ohos:vertical_center="true"
+            ohos:background_element="$graphic:button_back"
+            >
+        </Button>
+
+<!--        <DirectionalLayout-->
+<!--            ohos:height="40vp"-->
+<!--            ohos:width="match_content"-->
+<!--            ohos:orientation="vertical"-->
+<!--            ohos:center_in_parent="true">-->
+<!--            <Text-->
+<!--                ohos:id="$+id:text_topic"-->
+<!--                ohos:height="0vp"-->
+<!--                ohos:weight="1"-->
+<!--                ohos:width="match_content"-->
+<!--                ohos:layout_alignment="center"-->
+<!--                ohos:text="数据管理"-->
+<!--                ohos:text_alignment="center"-->
+<!--                ohos:text_size="20vp">-->
+<!--            </Text>-->
+
+<!--        </DirectionalLayout>-->
+        <DirectionalLayout
+            ohos:height="40vp"
+            ohos:width="match_content"
+            ohos:background_element="$graphic:background_field_search"
+            ohos:left_margin="20vp"
+            ohos:top_margin="10vp"
+            ohos:bottom_margin="10vp"
+            ohos:right_margin="20vp"
+            ohos:orientation="horizontal"
+            ohos:center_in_parent="true"
+            >
+            <Image
+                ohos:height="20vp"
+                ohos:width="20vp"
+                ohos:image_src="$media:icon_search"
+                ohos:left_margin="10vp"
+                ohos:layout_alignment="center"
+                >
+
+            </Image>
+            <Component
+                ohos:height="20vp"
+                ohos:width="1vp"
+                ohos:background_element="$color:black_000000"
+                ohos:layout_alignment="center"
+                ></Component>
+            <TextField
+                ohos:id="$+id:field_search"
+                ohos:height="40vp"
+                ohos:width="220vp"
+                ohos:bottom_margin="10vp"
+                ohos:hint="搜索..."
+                ohos:left_margin="2vp"
+                ohos:left_padding="10vp"
+                ohos:text_alignment="vertical_center"
+                ohos:text_color="#000000"
+                ohos:text_size="18fp"
+                >
+            </TextField>
+        </DirectionalLayout>
+
+        <Image
+            ohos:id="$+id:btn_add"
+            ohos:height="40vp"
+            ohos:width="40vp"
+            ohos:right_margin="10vp"
+            ohos:align_parent_right="true"
+            ohos:vertical_center="true"
+            ohos:image_src="$media:icon_add"
+            >
+        </Image>
+    </DependentLayout>
+
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        >
+
+    </DirectionalLayout>
+
+
+
+    <ListContainer
+        ohos:id="$+id:list_data"
+        ohos:height="0vp"
+        ohos:width="match_parent"
+        ohos:weight="1"
+        >
+
+    </ListContainer>
+
+</DirectionalLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="300vp"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <DirectionalLayout
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:background_white_radius_10"
+        ohos:left_margin="20vp"
+        ohos:right_margin="20vp"
+        ohos:orientation="vertical"
+
+        >
+        <Text
+            ohos:height="50vp"
+            ohos:width="match_parent"
+            ohos:left_padding="20vp"
+            ohos:text="选择参加对战的远程端设备"
+            ohos:text_alignment="vertical_center"
+            ohos:text_color="#000000"
+            ohos:text_size="16fp"
+            ></Text>
+        <ListContainer
+            ohos:id="$+id:list_container_device"
+            ohos:height="0vp"
+            ohos:width="match_parent"
+            ohos:weight="1">
+
+        </ListContainer>
+
+        <DirectionalLayout
+            ohos:height="50vp"
+            ohos:width="match_parent"
+            ohos:orientation="vertical"
+            >
+            <Component
+                ohos:height="1px"
+                ohos:width="match_parent"
+                ohos:background_element="$color:gray_666666">
+
+            </Component>
+
+            <Button
+                ohos:id="$+id:operate_no"
+                ohos:height="match_parent"
+                ohos:width="match_parent"
+                ohos:text="取消"
+                ohos:text_alignment="center"
+                ohos:text_color="$color:blue_1E90FF"
+                ohos:text_size="17fp"
+                >
+
+            </Button>
+        </DirectionalLayout>
+    </DirectionalLayout>
+</DirectionalLayout>

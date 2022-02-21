@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_content"
+    ohos:width="match_parent"
+    ohos:left_margin="5vp"
+    ohos:orientation="vertical"
+    ohos:right_margin="5vp">
+
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="#fffffff"
+        ohos:orientation="vertical"
+
+
+        >
+
+        <Text
+            ohos:id="$+id:text_title"
+            ohos:height="50vp"
+            ohos:width="match_parent"
+            ohos:text="提示"
+            ohos:text_size="20fp"
+            ohos:text_alignment="center"
+            ></Text>
+
+
+        <Text
+            ohos:id="$+id:text_content"
+            ohos:height="50vp"
+            ohos:width="match_parent"
+            ohos:top_margin="20vp"
+            ohos:bottom_margin="10vp"
+            ohos:left_margin="20vp"
+            ohos:right_margin="20vp"
+            ohos:text="AlertDialog"
+            ohos:text_color="#000000"
+            ohos:text_size="18fp"
+            ohos:text_alignment="center"
+            >
+        </Text>
+
+        <DirectionalLayout
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:background_element="#ffffff"
+            ohos:top_padding="5vp"
+            ohos:bottom_margin="20vp"
+            ohos:orientation="horizontal"
+            ohos:top_margin="20vp"
+            ohos:layout_alignment="center"
+            >
+
+
+            <Button
+                ohos:id="$+id:btn_ok"
+                ohos:height="45vp"
+                ohos:width="0vp"
+                ohos:weight="1"
+                ohos:left_margin="40vp"
+                ohos:right_margin="40vp"
+                ohos:bottom_margin="10vp"
+                ohos:background_element="$graphic:button"
+                ohos:text="确定"
+                ohos:text_color="#000000"
+                ohos:text_size="15fp"
+                >
+
+            </Button>
+        </DirectionalLayout>
+    </DirectionalLayout>
+
+</DirectionalLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:background_element="$media:background"
+    >
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:top_margin="30vp"
+        >
+        <Text
+            ohos:height="50vp"
+            ohos:width="match_parent"
+            ohos:layout_alignment="center"
+            ohos:text="游戏设置"
+            ohos:text_size="30fp"
+            ohos:text_alignment="center">
+
+        </Text>
+    </DirectionalLayout>
+
+
+
+    <DirectionalLayout
+        ohos:height="0vp"
+        ohos:weight="1"
+        ohos:width="match_parent"
+        ohos:top_margin="20vp"
+        ohos:orientation="horizontal"
+        >
+        <DirectionalLayout
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:bottom_padding="5vp"
+            ohos:layout_alignment="center"
+            >
+            <DependentLayout
+                ohos:height="match_content"
+                ohos:width="200vp"
+                ohos:layout_alignment="center"
+                >
+                <Text
+                    ohos:height="match_content"
+                    ohos:width="match_content"
+                    ohos:align_parent_left="true"
+                    ohos:text="题目"
+                    ohos:vertical_center="true"
+                    ohos:text_size="20fp"
+                    >
+
+                </Text>
+                <Button
+                    ohos:id="$+id:btn_select_key"
+                    ohos:height="50vp"
+                    ohos:width="150vp"
+                    ohos:align_parent_right="true"
+                    ohos:background_element="$graphic:button"
+                    ohos:bottom_margin="5vp"
+                    ohos:top_margin="10vp"
+                    ohos:text="选择题目"
+                    ohos:text_size="20fp"
+                    >
+                </Button>
+            </DependentLayout>
+
+
+
+            <DependentLayout
+                ohos:height="match_content"
+                ohos:width="200vp"
+                ohos:layout_alignment="center"
+                >
+                <Text
+                    ohos:height="match_content"
+                    ohos:width="match_content"
+                    ohos:text="时间"
+                    ohos:text_size="20fp"
+                    ohos:text_alignment="center"
+                    ohos:align_parent_left="true"
+                    ohos:vertical_center="true"
+                    >
+
+                </Text>
+                <Button
+                    ohos:id="$+id:btn_select_time"
+                    ohos:height="50vp"
+                    ohos:width="150vp"
+                    ohos:align_parent_right="true"
+                    ohos:background_element="$graphic:button"
+                    ohos:bottom_margin="5vp"
+                    ohos:top_margin="10vp"
+                    ohos:text="选择时间"
+                    ohos:text_size="20fp"
+                    >
+                </Button>
+
+            </DependentLayout>
+
+<!--            <Button-->
+<!--                ohos:id="$+id:btn_single_game"-->
+<!--                ohos:height="50vp"-->
+<!--                ohos:width="150vp"-->
+<!--                ohos:background_element="$graphic:button"-->
+<!--                ohos:bottom_margin="5vp"-->
+<!--                ohos:top_margin="10vp"-->
+<!--                ohos:layout_alignment="center"-->
+<!--                ohos:text="添加"-->
+<!--                ohos:text_size="20fp"-->
+<!--                >-->
+<!--            </Button>-->
+
+
+        </DirectionalLayout>
+
+    </DirectionalLayout>
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:orientation="vertical"
+        ohos:bottom_margin="70vp"
+        >
+        <Button
+            ohos:id="$+id:btn_start"
+            ohos:height="50vp"
+            ohos:width="150vp"
+            ohos:background_element="$graphic:button"
+            ohos:bottom_margin="5vp"
+            ohos:top_margin="5vp"
+            ohos:layout_alignment="center"
+            ohos:text="开始游戏"
+            ohos:text_size="20fp"
+            >
+        </Button>
+
+        <Button
+            ohos:id="$+id:btn_back"
+            ohos:height="50vp"
+            ohos:width="150vp"
+            ohos:background_element="$graphic:button"
+            ohos:bottom_margin="5vp"
+            ohos:top_margin="5vp"
+            ohos:layout_alignment="center"
+            ohos:text="返回"
+            ohos:text_size="20fp"
+            >
+        </Button>
+    </DirectionalLayout>
+
+</DirectionalLayout>

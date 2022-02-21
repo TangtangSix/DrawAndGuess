@@ -1,0 +1,113 @@
+{
+  "app": {
+    "bundleName": "com.tang.draw",
+    "vendor": "tang",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.tang.draw",
+    "name": ".MyApplication",
+    "mainAbility": "com.tang.draw.page.BeginAbility",
+    "deviceType": [
+      "phone",
+      "tablet",
+      "tv",
+      "wearable",
+      "car"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "visible": true,
+        "name": "com.tang.draw.page.BeginAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:AppName",
+        "type": "page",
+        "launchType": "standard",
+        "metaData": {
+          "customizeData": [
+            {
+              "name": "hwc-theme",
+              "value": "androidhwext:style/Theme.Emui.NoTitleBar"
+            }
+          ]
+        }
+      },
+      {
+        "name": "com.tang.draw.page.GameAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:AppName",
+        "type": "page",
+        "launchType": "standard",
+        "metaData": {
+          "customizeData": [
+            {
+              "name": "hwc-theme",
+              "value": "androidhwext:style/Theme.Emui.NoTitleBar"
+            }
+          ]
+        }
+      },
+      {
+        "name": "com.tang.draw.service.ServiceAbility",
+        "icon": "$media:icon",
+        "description": "主机端远程端协同的 ServiceAbility",
+        "type": "service"
+      },
+      {
+        "name": "com.tang.draw.page.DataAbility",
+        "icon": "$media:icon",
+        "description": "$string:dataability_description",
+        "type": "data",
+        "uri": "dataability://com.tang.draw.page.DataAbility"
+      }
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.DISTRIBUTED_DEVICE_STATE_CHANGE"
+      },
+      {
+        "name": "ohos.permission.GET_DISTRIBUTED_DEVICE_INFO"
+      },
+      {
+        "name": "ohos.permission.GET_BUNDLE_INFO"
+      },
+      {
+        "name": "ohos.permission.DISTRIBUTED_DATASYNC"
+      },
+      {
+        "name": "ohos.permission.WRITE_USER_STORAGE"
+      },
+      {
+        "name": "ohos.permission.READ_USER_STORAGE"
+      }
+    ],
+    "defPermissions": [
+      {
+        "name": "com.tang.draw.page.DataAbilityShellProvider.PROVIDER"
+      }
+    ]
+  }
+}

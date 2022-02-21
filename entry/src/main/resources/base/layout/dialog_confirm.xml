@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_content"
+    ohos:width="match_parent"
+    ohos:background_element="$graphic:background_dialog_confirm"
+    ohos:left_margin="5vp"
+    ohos:orientation="vertical"
+    ohos:right_margin="5vp">
+
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="#fffffff"
+        >
+
+        <Text
+            ohos:id="$+id:text_detail"
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:top_margin="20vp"
+            ohos:bottom_margin="10vp"
+            ohos:left_margin="20vp"
+            ohos:right_margin="20vp"
+            ohos:text="确定清空所有内容?"
+            ohos:text_color="#000000"
+            ohos:text_size="18fp"
+            ohos:text_alignment="center"
+            ohos:max_text_lines="3"
+            >
+        </Text>
+
+        <DirectionalLayout
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:background_element="#ffffff"
+            ohos:top_padding="5vp"
+            ohos:bottom_padding="5vp"
+            ohos:bottom_margin="20vp"
+            ohos:orientation="horizontal"
+            ohos:top_margin="20vp"
+            ohos:layout_alignment="center"
+            >
+
+            <Button
+                ohos:id="$+id:btn_cancel"
+                ohos:height="45vp"
+                ohos:width="0vp"
+                ohos:weight="1"
+                ohos:left_margin="20vp"
+                ohos:right_margin="10vp"
+                ohos:text="取消"
+                ohos:text_color="#D0BE76"
+                ohos:text_size="15fp"
+
+                ohos:background_element="$graphic:button_confirm_dialog_cancel"
+                >
+
+            </Button>
+
+            <Button
+                ohos:id="$+id:btn_ok"
+                ohos:height="45vp"
+                ohos:width="0vp"
+                ohos:weight="1"
+                ohos:left_margin="10vp"
+                ohos:right_margin="20vp"
+                ohos:background_element="$graphic:button_confirm_dialog_ok"
+                ohos:text="确定"
+                ohos:text_color="#DCC8A1"
+                ohos:text_size="15fp"
+                >
+
+            </Button>
+        </DirectionalLayout>
+    </DirectionalLayout>
+
+</DirectionalLayout>

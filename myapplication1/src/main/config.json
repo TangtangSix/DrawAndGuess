@@ -1,0 +1,51 @@
+{
+  "app": {
+    "bundleName": "com.tang.draw",
+    "vendor": "tang",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.tang.myapplication1",
+    "name": ".MyApplication",
+    "mainAbility": "com.tang.myapplication1.MainAbility",
+    "deviceType": [
+      "phone",
+      "tablet",
+      "tv",
+      "wearable"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "myapplication1",
+      "moduleType": "feature",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "visible": true,
+        "name": "com.tang.myapplication1.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:myapplication1_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ],
+    "js": [
+      {
+        "pages": [
+          "pages/index/index"
+        ],
+        "name": "default",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        }
+      }
+    ]
+  }
+}

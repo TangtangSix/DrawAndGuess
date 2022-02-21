@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<state-container
+    xmlns:ohos="http://schemas.huawei.com/res/ohos">
+    <item ohos:state="component_state_pressed"
+          ohos:element="$graphic:button_state_pressed_confirm_dialog_cancel">
+
+    </item>
+    <item ohos:state="component_state_empty"
+          ohos:element="$graphic:button_state_natural_confirm_dialog_cancel">
+
+    </item>
+</state-container>
