@@ -166,6 +166,12 @@ public class DrawView extends Component implements Component.DrawTask,Component.
         cacheCanvas=new Canvas(texture);
     }
 
+    /**
+     * 按下开始画线,抬起结束画线,把画线结果保存
+     * @param component
+     * @param touchEvent
+     * @return
+     */
     @Override
     public boolean onTouchEvent(Component component, TouchEvent touchEvent) {
         if(!canDraw){
@@ -366,52 +372,6 @@ public class DrawView extends Component implements Component.DrawTask,Component.
         this.canDraw=canDraw;
     }
 
-    public Stack<Path> getPaths() {
-        return paths;
-    }
-
-    public void setPaths(Stack<Path> paths) {
-        this.paths = paths;
-    }
-
-    public Stack<Integer> getStates() {
-        return states;
-    }
-
-    public void setStates(Stack<Integer> states) {
-        this.states = states;
-    }
-
-    public Stack<Color> getColors() {
-        return colors;
-    }
-
-    public void setColors(Stack<Color> colors) {
-        this.colors = colors;
-    }
-
-    public Stack<Float> getWidths() {
-        return widths;
-    }
-
-    public void setWidths(Stack<Float> widths) {
-        this.widths = widths;
-    }
-
-
-    public List<Point> getPoints() {
-        return points;
-    }
-
-    public void setPoints(List<Point> points) {
-        if (this.points==null){
-            this.points=points;
-        }
-        else{
-            this.points.clear();
-            this.points.addAll(points);
-        }
-    }
 
 }
 

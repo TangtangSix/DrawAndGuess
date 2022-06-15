@@ -63,6 +63,13 @@ public class RemoteProxy implements IRemoteBroker {
         }
     }
 
+    /**
+     * 发送绘制线的点坐标信息和画笔信息
+     * @param points
+     * @param colors
+     * @param states
+     * @param widths
+     */
     public void sendDrawData(List<Point> points, int colors, DrawView.State states, float widths){
         LogUtils.info(getClass().getSimpleName()+" points "+points);
         LogUtils.info(getClass().getSimpleName()+" colors "+colors);

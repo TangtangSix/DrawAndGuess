@@ -1,5 +1,4 @@
 package com.tang.draw.dialog;
-
 import com.tang.draw.ResourceTable;
 import ohos.agp.components.Button;
 import ohos.agp.components.Component;
@@ -43,7 +42,6 @@ public class AlertDialog extends CommonDialog {
         initClickedListener();
 
     }
-
 
     private void initClickedListener() {
         okBtn.setClickedListener(component -> {
@@ -137,6 +135,4 @@ public class AlertDialog extends CommonDialog {
     public interface DialogClickListener {
         void onOKClick();
     }
-
-
 }

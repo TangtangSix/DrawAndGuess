@@ -59,6 +59,9 @@ public class StrokeWidthChooseView extends Component implements Component.DrawTa
         addDrawTask(this);
     }
 
+    /**
+     * 初始化画笔
+     */
     private void initPaint() {
         mPaint = new Paint();
         mPaint.setStyle(Paint.Style.FILL_STYLE);
@@ -77,7 +80,9 @@ public class StrokeWidthChooseView extends Component implements Component.DrawTa
         init();
     }
 
-
+    /**
+     * 初始化组件,进行绘制组件
+     */
     private void init(){
         rectList = new ArrayList<>();
         regionList = new ArrayList<>();
@@ -100,10 +105,11 @@ public class StrokeWidthChooseView extends Component implements Component.DrawTa
         }
     }
 
-
-
-
-
+    /**
+     * 重新绘图函数,当界面刷新时自动调用
+     * @param component
+     * @param canvas
+     */
     @Override
     public void onDraw(Component component, Canvas canvas) {
         mPaint.setColor(new Color(mPaintColor));
@@ -131,6 +137,12 @@ public class StrokeWidthChooseView extends Component implements Component.DrawTa
         }
     }
 
+    /**
+     * 绘制组件大小
+     * @param widthEstimateConfig
+     * @param heightEstimateConfig
+     * @return
+     */
     @Override
     public boolean  onEstimateSize(int widthEstimateConfig, int heightEstimateConfig) {
         int componentWidth = EstimateSpec.getSize(widthEstimateConfig);
@@ -148,7 +160,12 @@ public class StrokeWidthChooseView extends Component implements Component.DrawTa
         return true;
     }
 
-
+    /**
+     * 触摸事件
+     * @param component
+     * @param touchEvent
+     * @return
+     */
     @Override
     public boolean onTouchEvent(Component component, TouchEvent touchEvent) {
         MmiPoint mmiPoint=touchEvent.getPointerPosition(0);

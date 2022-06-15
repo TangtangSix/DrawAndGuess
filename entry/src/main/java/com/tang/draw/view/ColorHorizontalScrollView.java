@@ -101,16 +101,12 @@ public class ColorHorizontalScrollView extends Component implements Component.Dr
     }
 
 
-
-
-
     @Override
     public void onDraw(Component component, Canvas canvas) {
         Rect rect;
         Rect chooseRect;
-        HiLog.info(HI_LOG_LABEL, getClass().getSimpleName()+" --- onDraw");
-        HiLog.info(HI_LOG_LABEL, getClass().getSimpleName()+" --- width "+width);
         switch (mCurrentState){
+            //橡皮擦模式不突出选中颜色
             case ERASER:
                 for (int i = 0; i < rectList.size(); i++){
                     mPaint.setColor(new Color(colors[i]));
@@ -123,6 +119,7 @@ public class ColorHorizontalScrollView extends Component implements Component.Dr
                 for (int i = 0; i < rectList.size(); i++){
                     mPaint.setColor(new Color(colors[i]));
                     rect = rectList.get(i);
+                    //把选中的颜色突出显示
                     if (currentIndex == i){
                         chooseRect = new Rect(rect.left-getScrollValue(AXIS_X), rect.bottom - 10, rect.right-getScrollValue(AXIS_X), rect.bottom);
                         rect = new Rect(rect.left-getScrollValue(AXIS_X), rect.top - 30, rect.right-getScrollValue(AXIS_X), rect.bottom - 30);
@@ -140,10 +137,6 @@ public class ColorHorizontalScrollView extends Component implements Component.Dr
 
     @Override
     public boolean onEstimateSize(int widthEstimateConfig, int heightEstimateConfig) {
-//        width = Component.EstimateSpec.getSize(widthEstimateConfig);
-//        height = Component.EstimateSpec.getSize(heightEstimateConfig);
-//        setEstimatedSize(Component.EstimateSpec.getChildSizeWithMode(width, height, EstimateSpec.UNCONSTRAINT),
-//                Component.EstimateSpec.getChildSizeWithMode(width, height, EstimateSpec.UNCONSTRAINT));
 
         int widthSpce = EstimateSpec.getMode(widthEstimateConfig);
         int heightSpce = EstimateSpec.getMode(heightEstimateConfig);
@@ -186,6 +179,12 @@ public class ColorHorizontalScrollView extends Component implements Component.Dr
         return true;
     }
 
+    /**
+     * 根据点击区域判断选中的颜色
+     * @param component
+     * @param touchEvent
+     * @return
+     */
     @Override
     public boolean onTouchEvent(Component component, TouchEvent touchEvent) {
         MmiPoint mmiPoint =touchEvent.getPointerPosition(touchEvent.getIndex());;
@@ -216,11 +215,6 @@ public class ColorHorizontalScrollView extends Component implements Component.Dr
             case TouchEvent.PRIMARY_POINT_UP:
                 HiLog.info(HI_LOG_LABEL,getClass().getSimpleName()+"TouchEvent.PRIMARY_POINT_UP");
 
-//                startX = mmiPoint.getX();
-//                startY = mmiPoint.getY();
-//                HiLog.info(HI_LOG_LABEL,getClass().getSimpleName()+" --- h "+getScreenHeight());
-//                HiLog.info(HI_LOG_LABEL,getClass().getSimpleName()+" --- y "+mmiPoint.getY());
-//                HiLog.info(HI_LOG_LABEL,getClass().getSimpleName()+" --- point ("+startX+","+startY+")");
                 if (Math.abs(dx) <= 10 && Math.abs(dy) <= 10){
                     for (int i = 0; i < rectList.size(); i++){
                         if (rectList.get(i).contains((int) startX+getScrollValue(AXIS_X)  , (int) startY+getScrollValue(AXIS_Y) ,(int)startX+getScrollValue(AXIS_X),(int)startY+getScrollValue(AXIS_Y))){

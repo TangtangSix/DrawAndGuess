@@ -111,6 +111,11 @@ public class GameAbilitySlice extends AbilitySlice implements ColorHorizontalScr
     public void onActive() {
         super.onActive();
         LogUtils.info(getClass().getSimpleName() + " --- onActive");
+        //防止第二次进入界面无法操作
+        if(drawView!=null && finishBtn !=null){
+            drawView.setCanDraw(true);
+            finishBtn.setEnabled(true);
+        }
         if (drawView != null) {
             drawView.clear();
         }
@@ -177,6 +182,7 @@ public class GameAbilitySlice extends AbilitySlice implements ColorHorizontalScr
             colorHorizontalScrollView.setStrokeWidthChooseView(strokeWidthChooseView);
             colorHorizontalScrollView.setOnStateChnagedListener(this);
             topicText.setText(key);
+
 
         } else {
             drawLayout.setVisibility(Component.HIDE);
@@ -390,10 +396,15 @@ public class GameAbilitySlice extends AbilitySlice implements ColorHorizontalScr
                     break;
                 case Constants.GUESS_RIGHT:
                     gameOver(true);
+                    break;
                 case Constants.GUESS_ERROR:
                     gameOver(false);
+                    break;
                 case Constants.TIME_OUT:
                     timeOut();
+                    break;
+                default:
+                    break;
             }
         });
 
@@ -519,7 +530,6 @@ public class GameAbilitySlice extends AbilitySlice implements ColorHorizontalScr
      */
     private void finish(){
         alertDialog.setmContentText("主机端已经绘制完成,请抓紧时间");
-        disableComponents();
         alertDialog.show();
     }
 
@@ -528,6 +538,7 @@ public class GameAbilitySlice extends AbilitySlice implements ColorHorizontalScr
      *
      */
     private void timeOut(){
+        LogUtils.info(getClass().getSimpleName() + " timeOut");
         alertDialog.setmContentText("时间到,游戏结束");
         isGameOver=true;
         disableComponents();
@@ -539,10 +550,14 @@ public class GameAbilitySlice extends AbilitySlice implements ColorHorizontalScr
      *
      */
     private void disableComponents(){
-        finishBtn.setEnabled(false);
-        answerInput.setEditable(false);
-        submitBtn.setEnabled(false);
-        drawView.setCanDraw(false);
+        if(!isMainDevice) {
+            answerInput.setEditable(false);
+            submitBtn.setEnabled(false);
+        }
+        else {
+            finishBtn.setEnabled(false);
+            drawView.setCanDraw(false);
+        }
     }
 
 }
